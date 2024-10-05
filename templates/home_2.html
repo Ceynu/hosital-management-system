@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Added to cart
+{%endblock%}
+
+{% block content %}
+
+{% load static %}
+<!-- hospital/templates/hospital/home.html -->
+<h1>Welcome to HealthClass</h1>
+<p>This is the homepage of the hospital management system.</p>
+
+<form method="GET" action="{% url 'doctor_list' %}">
+    <button type="submit">doctors list</button>
+</form>
+<form method="GET" action="{% url 'doctor_list' %}">
+    <button type="submit">doctors list</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.doctor.name }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

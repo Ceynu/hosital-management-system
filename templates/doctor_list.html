@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Added to cart
+{%endblock%}
+
+{% block content %}
+
+{% load static %}
+<h1>Available Doctors</h1>
+<ul>
+{% for doctor in doctors %}
+    <li>{{ doctor.name }} ({{ doctor.specialty }}) - Fee: {{ doctor.consultation_fee }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+
+

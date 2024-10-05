@@ -1,0 +1,18 @@
+
+
+{% extends 'base.html' %}
+
+{%block title%}
+Added to cart
+{%endblock%}
+
+{% block content %}
+
+{% load static %}
+<h1>My Appointment History</h1>
+<ul>
+{% for appointment in appointments %}
+    <li>{{ appointment.doctor.name }} - {{ appointment.appointment_date }} - Status: {{ appointment.status }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

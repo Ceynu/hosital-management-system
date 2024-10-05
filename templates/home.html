@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Added to cart
+{%endblock%}
+
+{% block content %}
+
+{% load static %}
+  <h1>Welcome to HealthCare Plus</h1>
+  <p>This is the homepage of the hospital management system.</p>
+  <ol>
+    <li>
+        <a href="{% url 'doctor_list' %}" class="btn btn-primary">Doctors List</a>
+    </li>
+    <li>
+        <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
+    </li>
+    <li>
+        <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+    </li>
+  </ol>
+  
+  
+  
+{% endblock %}

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Clinic Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/168ebc7feb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-blue-700 to-[#ffffff00] sticky py-2 px-2 flex justify-between shadow-lg backdrop-blur-md z-50">
+      <div>
+        <p class="font-Inter font-bold lg:text-lg text-white">HappySmile</p>
+        <p class="font-Ubuntu text-xs font-semibold lg:text-sm text-slate-200">We care for your smile</p>
+      </div>
+      <div class="flex">
+        <ul class="flex text-white font-mono gap-x-1 lg:mr-8">
+          <li class="lg:mx-4 py-2 hover:underline transition-all ease-in hover:text-slate-200">
+            <a class="rounded-3xl bg-blue-500 px-2 py-1 lg:px-4 lg:py-2 text-[10px] lg:text-base" href="#about">About Us</a>
+          </li>
+          <li class="lg:mx-4 py-2 hover:underline transition-all ease-in hover:text-slate-200">
+            <a class="rounded-3xl bg-blue-500 px-2 py-1 lg:px-4 lg:py-2 text-[10px] lg:text-base" href="#service">Services</a>
+          </li>
+          <li class="lg:mx-4 py-2 hover:underline transition-all ease-in hover:text-slate-200">
+            <a class="rounded-3xl bg-blue-500 px-2 py-1 lg:px-4 lg:py-2 text-[10px] lg:text-base" href="#review">Reviews</a>
+          </li>
+          <li class="lg:mx-4 py-2 hover:underline transition-all ease-in hover:text-slate-200">
+            <a class="rounded-3xl bg-blue-500 px-2 py-1 lg:px-4 lg:py-2 text-[10px] lg:text-base" href="#call">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block content %}
+    <!-- Your content here -->
+    {% endblock %}
+
+    <footer class="w-full px-12 py-10 bg-[#1D3157] text-white">
+      <section class="w-full lg:m-auto flex flex-col lg:flex-row lg:justify-between ">
+        <p class="sm:text-center">Copyright © 2022 HappySmile | Powered by <a class="text-yellow-300 hover:underline hover:text-yellow-600" href="#" target="_blank">RitsUX.coder</a> aka Sk Ripon</p>
+        <div class="flex items-center justify-center lg:gap-x-7 lg:content-end lg:ml-96 mt-5 gap-x-4">
+          <a href="#" target="_blank" class="hover:text-green-500"><i class="fa-brands fa-github fa-xl"></i></a>
+          <a href="#" target="_blank" class="hover:text-blue-400"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+          <a href="#" target="_blank" class="hover:text-fuchsia-300"><i class="fa-regular fa-envelope fa-xl"></i></a>
+          <a href="#" target="_blank" class="hover:text-sky-400"><i class="fa-brands fa-twitter fa-xl"></i></a>
+        </div>
+      </section>
+    </footer>
+    <script src="{% static 'path/to/your/script.js' %}"></script>
+  </body>
+</html>
